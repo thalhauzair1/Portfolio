@@ -1,0 +1,16 @@
+.tech-chip {
+    background-color: #1e293b;
+    color: #2C7A7B;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 8px 14px;
+    border-radius: 9999px;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    display: inline-block;
+  }
+  
+  .tech-chip:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+    box-shadow: 0 0 8px rgba(0, 204, 255, 0.6); /* Glowing effect on tech tags */
+  }
+  

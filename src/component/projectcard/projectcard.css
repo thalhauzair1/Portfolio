@@ -1,0 +1,117 @@
+/* Container */
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 750px;
+}
+
+/* Project Card */
+.project-card {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  gap: 20px;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer; /* Indicates interactivity */
+}
+
+/* Project Card Hover */
+.project-card:hover {
+  transform: translateY(-5px) scale(1.05); /* Slight lift with scaling effect */
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); /* Larger shadow for emphasis */
+}
+
+/* Thumbnail */
+.project-image {
+  width: 160px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+  background-color: #1e293b;
+  transition: transform 0.3s ease; /* Smooth image interaction */
+}
+
+.project-card:hover .project-image {
+  transform: scale(1.1); /* Slight zoom-in effect on image */
+}
+
+/* Text Content */
+.project-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Title */
+.project-title a {
+  color: #e2e8f0;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.project-title a:hover {
+  color: #38bdf8; /* Bright blue */
+  transform: scale(1.05); /* Subtle scaling for emphasis */
+}
+
+/* Description */
+.project-description {
+  color: #cbd5e1;
+  margin-top: 6px;
+  line-height: 1.6;
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+}
+
+.project-card:hover .project-description {
+  opacity: 1; /* Full opacity on hover for emphasis */
+}
+
+/* Tech Stack */
+.project-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* Tech Tags */
+.tech-chip {
+  background-color: #1e293b;
+  color: #38bdf8;
+  font-weight: 500;
+  padding: 8px 14px;
+  border-radius: 9999px;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.tech-chip:hover {
+  transform: scale(1.1); /* Slight zoom on hover */
+  box-shadow: 0 0 8px rgba(0, 204, 255, 0.6); /* Glowing effect on tech tags */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .project-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 16px;
+  }
+
+  .project-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .project-title a {
+    font-size: 18px;
+  }
+
+  .project-description {
+    font-size: 14px;
+  }
+}

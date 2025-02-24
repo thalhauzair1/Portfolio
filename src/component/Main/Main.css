@@ -1,0 +1,115 @@
+/* Main Layout */
+.main {
+  flex: 1;
+  padding-left: 64px;
+  max-width: 800px;
+  margin: 3rem;
+  z-index: 2311;
+}
+
+/* About Section */
+.about-section {
+  margin-bottom: 64px;
+}
+
+.about-section p {
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.about-section p:last-child {
+  margin-bottom: 0;
+}
+
+/* Experience Section */
+.experience-section {
+  margin-bottom: 64px;
+}
+
+/* Projects Section */
+.projects-section {
+  display: grid;
+  gap: 24px;
+}
+
+/* Utility Classes */
+.chip {
+  background-color: #21262d;
+  padding: 4px 12px;
+  border-radius: 16px;
+}
+
+/* Resume Link Styles */
+.resume-container {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 2rem;
+}
+
+.resume-link {
+  font-size: 18px;
+  font-weight: 500;
+  color: #e2e8f0; /* Soft contrast for readability */
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.3s ease, transform 0.3s ease;
+  position: relative;
+}
+
+.resume-link::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, #38bdf8, transparent);
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+.resume-link:hover {
+  color: #38bdf8; /* Soft glowing blue */
+  transform: translateY(-2px);
+}
+
+.resume-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.arrow-icon {
+  width: 18px;
+  height: 18px;
+  stroke: #38bdf8; /* Matches hover color */
+  transition: transform 0.3s ease;
+}
+
+.resume-link:hover .arrow-icon {
+  transform: translateX(4px); /* Smooth right motion */
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .main {
+    padding-left: 32px;
+    max-width: 100%;
+    margin: 1rem; /* Adjust margin on smaller screens */
+  }
+
+  .about-section,
+  .experience-section {
+    margin-bottom: 32px; /* Reduce spacing for smaller screens */
+  }
+
+  .projects-section {
+    grid-template-columns: 1fr; /* Stack projects vertically */
+  }
+
+  .resume-container {
+    margin-top: 10px; /* Slightly smaller margin on mobile */
+  }
+}

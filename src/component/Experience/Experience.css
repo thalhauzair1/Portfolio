@@ -1,0 +1,75 @@
+/* Experience Card */
+.experience-card {
+  border-radius: 8px;
+  padding: 16px;
+  border: 1px solid transparent;
+  background-color: transparent;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  cursor: pointer; /* Indicates interactivity */
+}
+.experience-list{
+  display: flex;
+  flex-direction: column;
+  gap:2rem;
+}
+/* Hover Effect */
+.experience-card:hover {
+  transform: translateY(-5px) scale(1.05); /* Slight lift with scaling effect */
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); /* Larger shadow for emphasis */
+}
+
+/* Title */
+.card-title {
+  font-weight: 600;
+  color: #e6f1ff;
+  margin-bottom: 8px;
+}
+
+/* Company Name */
+.card-company {
+  color: #00a3ff;
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.card-company:hover {
+  color: #33ccff; /* Light blue */
+  transform: scale(1.05); /* Slight scaling on hover */
+}
+
+/* Description & Details */
+.card-description,
+.card-details {
+  color: #c2d1e1;
+  line-height: 1.5;
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+}
+
+.experience-card:hover .card-description,
+.experience-card:hover .card-details {
+  opacity: 1; /* Full opacity on hover */
+}
+
+/* Skills Container */
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+/* Skill Chips */
+.skill-chip {
+  background-color: rgba(0, 153, 255, 0.15);
+  color: #d0e2ff;
+  padding: 6px 14px;
+  border-radius: 16px;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.skill-chip:hover {
+  background-color: rgba(0, 153, 255, 0.3); /* Slightly brighter hover effect */
+  transform: scale(1.05); /* Slight zoom on hover */
+}

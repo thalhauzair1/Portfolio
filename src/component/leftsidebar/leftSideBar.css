@@ -1,0 +1,166 @@
+.left-sidebar {
+  width: 400px;
+  position: sticky;
+  top: 64px;
+  height: calc(100vh - 64px);
+  padding-right: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.heroTitle{
+  cursor: pointer;
+  
+}
+/* Profile Header */
+.profile-header {
+  margin-bottom: 48px;
+  text-align: left;
+}
+
+.profile-header h1 {
+  font-weight: 750;
+  color: #ffffff;
+  margin-bottom: 8px;
+  /* font-style: oblique; */
+}
+
+.profile-header h2 {
+  font-weight: 400;
+  margin-bottom: 24px;
+}
+
+.profile-header p {
+  line-height: 1.6;
+}
+
+/* Sidebar Navigation */
+.sidebar-nav {
+  margin-bottom: 48px;
+}
+
+.sidebar-nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar-nav li {
+  position: relative;
+  margin-bottom: 16px;
+  transition: transform 0.3s ease;
+}
+
+.sidebar-nav a {
+  font-weight: 500;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.sidebar-nav a:hover {
+  color: #ffffff;
+  transform: translateX(6px);
+}
+
+/* Social Links */
+.social-links {
+  display: flex;
+  gap: 16px;
+  margin-top: auto; /* Push to bottom */
+}
+
+.social-icon {
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.social-icon:hover {
+  color: #ffffff;
+  transform: scale(1.1);
+}
+
+/* Remove previous unused styles */
+.navline {
+  display: none;
+}
+
+.sidebar-container {
+  width: 100%;
+}
+
+.sidebar-details {
+  width: 100%;
+}
+
+.sidebar-social {
+  list-style: none;
+}
+
+.social-links a {
+  font-size: 18px;
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 1024px) {
+  .left-sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    margin: 1rem;
+    padding: 1rem;
+    align-self: center;
+  }
+
+  .sidebar-nav {
+    display: none; /* Hide sidebar navigation on mobile */
+  }
+
+  .sidebar-nav a {
+    font-size: 16px;
+  }
+
+  .profile-header h1 {
+    font-size: 24px;
+
+  }
+
+  .profile-header h2 {
+    font-size: 18px;
+  }
+
+  .social-links {
+    justify-content: center;
+    margin-top: 32px;
+  }
+}
+
+/* Sidebar Link Underline Effect */
+.sidebar-nav ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 40px; /* Default width */
+  height: 2px; /* Original height of the underline */
+  background: #ffffff;
+  transition: width 0.3s ease, opacity 0.3s ease;
+  opacity: 0.5;
+}
+
+.sidebar-nav ul li a:hover::after {
+  width: 70px; /* On hover, the underline becomes wider */
+  opacity: 1;
+}
+
+/* Active Navigation State */
+.sidebar-nav ul li a.active {
+  font-weight: bold;
+  color: #00ccff; /* Adjust color for highlight */
+}
+
+.sidebar-nav ul li a.active::after {
+  width: 70px; /* Increase the width of the underline when active */
+  background: #38bdf8; /* Active underline color */
+  opacity: 1;
+  height: 3px; /* Thicker underline when active */
+}

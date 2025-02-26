@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import LeftSideBar from "./component/leftsidebar/leftSideBar";
 import "./App.css";
 import Main from "./component/Main/Main";
+import { Analytics } from "@vercel/analytics/react";
 
 function App() {
   document.addEventListener("mousemove", (event) => {
@@ -27,6 +28,7 @@ function App() {
         projectsRef={projectsRef}
         skillsRef={skillsRef}
       />
+      <Analytics />
     </div>
   );
 }

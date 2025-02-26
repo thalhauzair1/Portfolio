@@ -16,6 +16,10 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer; /* Indicates interactivity */
 }
+.project-title a{
+  font-size: 26px;
+  font-weight: 600;
+}
 
 /* Project Card Hover */
 .project-card:hover {
@@ -107,11 +111,11 @@
     height: auto;
   }
 
-  .project-title a {
+  /* .project-title a {
     font-size: 18px;
-  }
+  } */
 
-  .project-description {
+  /* .project-description {
     font-size: 14px;
-  }
+  } */
 }

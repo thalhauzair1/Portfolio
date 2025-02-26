@@ -1,4 +1,6 @@
+/* Sidebar Styling */
 .left-sidebar {
+  margin: 1rem;
   width: 400px;
   position: sticky;
   top: 64px;
@@ -8,10 +10,12 @@
   flex-direction: column;
   justify-content: space-between;
 }
-.heroTitle{
+
+/* Hero Title */
+.heroTitle {
   cursor: pointer;
-  
 }
+
 /* Profile Header */
 .profile-header {
   margin-bottom: 48px;
@@ -22,7 +26,6 @@
   font-weight: 750;
   color: #ffffff;
   margin-bottom: 8px;
-  /* font-style: oblique; */
 }
 
 .profile-header h2 {
@@ -63,23 +66,37 @@
   transform: translateX(6px);
 }
 
-/* Social Links */
-.social-links {
-  display: flex;
-  gap: 16px;
-  margin-top: auto; /* Push to bottom */
+.social-links ul {
+  display: flex; 
+  align-items: center; 
+  gap: 16px; 
+  padding: 0; 
+  margin: 0; }
+
+.social-links li {
+  list-style-type: none; 
 }
 
 .social-icon {
-  transition: color 0.3s ease, transform 0.2s ease;
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
 }
 
-.social-icon:hover {
-  color: #ffffff;
-  transform: scale(1.1);
+.social-icon img {
+  width: 30px;  
+  height: 30px;  
+  transition: transform 0.2s ease; 
+  object-fit: contain; 
+  filter: invert(61%) sepia(68%) saturate(466%) hue-rotate(176deg) brightness(95%) contrast(88%);
+  transition: transform 0.3s ease-in-out; 
 }
 
-/* Remove previous unused styles */
+.social-icon img:hover {
+  transform: scale(1.1); 
+}
+
+
 .navline {
   display: none;
 }
@@ -96,11 +113,8 @@
   list-style: none;
 }
 
-.social-links a {
-  font-size: 18px;
-}
 
-/* Mobile Responsive Adjustments */
+
 @media (max-width: 1024px) {
   .left-sidebar {
     width: 100%;
@@ -112,16 +126,13 @@
   }
 
   .sidebar-nav {
-    display: none; /* Hide sidebar navigation on mobile */
+    display: none; 
   }
 
-  .sidebar-nav a {
-    font-size: 16px;
-  }
+
 
   .profile-header h1 {
     font-size: 24px;
-
   }
 
   .profile-header h2 {
@@ -132,35 +143,39 @@
     justify-content: center;
     margin-top: 32px;
   }
+
+  .social-icon img {
+    width: 20px;
+    height: 20px;
+  }
 }
 
-/* Sidebar Link Underline Effect */
 .sidebar-nav ul li a::after {
   content: "";
   position: absolute;
   left: 0;
   bottom: -4px;
-  width: 40px; /* Default width */
-  height: 2px; /* Original height of the underline */
+  width: 40px; 
+  height: 2px; 
   background: #ffffff;
   transition: width 0.3s ease, opacity 0.3s ease;
   opacity: 0.5;
 }
 
 .sidebar-nav ul li a:hover::after {
-  width: 70px; /* On hover, the underline becomes wider */
+  width: 70px; 
   opacity: 1;
 }
 
-/* Active Navigation State */
+
 .sidebar-nav ul li a.active {
   font-weight: bold;
-  color: #00ccff; /* Adjust color for highlight */
+  color: #00ccff; 
 }
 
 .sidebar-nav ul li a.active::after {
-  width: 70px; /* Increase the width of the underline when active */
-  background: #38bdf8; /* Active underline color */
+  width: 70px; 
+  background: #38bdf8;
   opacity: 1;
-  height: 3px; /* Thicker underline when active */
+  height: 3px; 
 }

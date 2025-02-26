@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./leftSideBar.css";
+import gitIcon from "../../assets/icons/github.svg";
+import linkedIn from "../../assets/icons/linkedIn.svg";
+import mailIcon from "../../assets/icons/email.svg";
 
 function LeftSideBar({ sectionsRef }) {
   const [activeSection, setActiveSection] = useState("");
@@ -64,25 +67,33 @@ function LeftSideBar({ sectionsRef }) {
       </nav>
 
       <div className="social-links">
-        <a
-          href="https://github.com/thalhauzair1"
-          className="social-icon"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          GH
-        </a>
-        <a
-          href="https://www.linkedin.com/in/thalha-uzair/"
-          className="social-icon"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          in
-        </a>
-        <a href="mailto:thalhauzair4@gmail.com" className="social-icon">
-          ✉️
-        </a>
+        <ul>
+          <li>
+            <a
+              href="https://github.com/thalhauzair1"
+              className="social-icon"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={gitIcon} alt="GitHub" />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/thalha-uzair/"
+              className="social-icon"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={linkedIn} alt="LinkedIn" />
+            </a>
+          </li>
+          <li>
+            <a href="mailto:thalhauzair4@gmail.com" className="social-icon">
+              <img src={mailIcon} alt="Email" />
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
   );

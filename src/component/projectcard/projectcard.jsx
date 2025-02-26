@@ -68,7 +68,7 @@ function ProjectCard() {
           <div className="project-content">
             <h3 className="project-title">
               <a href={project.link} target="_blank" rel="noopener noreferrer">
-                {project.title} ↗
+                {project.title} <span>↗</span>
               </a>
             </h3>
             <p className="project-description">{project.description}</p>

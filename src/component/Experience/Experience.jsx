@@ -8,7 +8,7 @@ const Experience = () => {
       id: 1,
       title: "MuleSoft Intern",
       company: "Capgemini",
-      date: "Jan 2020",
+      date: "Jan 2020 - Sept 2020",
       location: "Remote",
       skills: ["MuleSoft", "Dell Boomi", "API Integration", "Spring Boot"],
       description:
@@ -20,7 +20,7 @@ const Experience = () => {
       id: 2,
       title: "Developer",
       company: "Capgemini",
-      date: "2020 - 2022",
+      date: "Nov 2020 - Nov 2022",
       location: "India",
       skills: ["Java", "Spring Boot", "AngularJS", "MySQL", "Liquibase Script"],
       description:
@@ -32,7 +32,7 @@ const Experience = () => {
       id: 3,
       title: "Apple Repair Technician",
       company: "Tbooth Wireless",
-      date: "2022",
+      date: "Feb 2023  - Oct 2023 ",
       location: "Canada",
       skills: ["Hardware Repair", "Customer Service", "Diagnostics"],
       description: "Performed diagnostics and repairs on Apple devices.",
@@ -43,7 +43,7 @@ const Experience = () => {
       id: 4,
       title: "Geek Squad Technician",
       company: "Best Buy",
-      date: "2023 - Present",
+      date: "Oct 2023  - Present",
       location: "Canada",
       skills: ["Technical Support", "Diagnostics", "Customer Service"],
       description: "Delivering expert repair services and technical solutions.",
@@ -60,7 +60,7 @@ const Experience = () => {
             <span className="card-date">{item.date}</span>
             <div className="job-info">
               <h3 className="card-title">{item.title}</h3>
-              <p className="card-company">{item.company} ↗</p>
+              <p className="card-company">{item.company} </p>
             </div>
           </div>
           <p className="card-location">{item.location}</p>

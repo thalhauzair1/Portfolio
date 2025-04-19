@@ -5,6 +5,7 @@ import favioImage from "../../assets/ProjectImage/favio.svg";
 import pawguardImage from "../../assets/ProjectImage/pawguard.svg";
 import taskAppImage from "../../assets/ProjectImage/task-app.png";
 import cleanOpsImage from "../../assets/ProjectImage/cleanops.svg";
+import steganographyAppImage from "../../assets/ProjectImage/stego.png"; // Import your image here
 
 function ProjectCard() {
   const projects = [
@@ -50,6 +51,14 @@ function ProjectCard() {
       ],
       link: "https://cleanops-landingpage.vercel.app/", // Replace with actual link
       image: cleanOpsImage, // Replace with your actual image path
+    },
+    {
+      title: "Steganography Web App",
+      description:
+        "A full-stack application that hides and decodes secret messages inside PNG images using LSB steganography. Built with Java Spring Boot and deployed on Railway.",
+      stack: ["Java", "Spring Boot", "HTML", "CSS", "JavaScript", "Railway"],
+      link: "https://steganography-e300.up.railway.app/",
+      image: steganographyAppImage, // Replace with your actual image import/path
     },
   ];
 

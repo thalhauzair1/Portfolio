@@ -6,6 +6,7 @@ import pawguardImage from "../../assets/ProjectImage/pawguard.svg";
 import taskAppImage from "../../assets/ProjectImage/task-app.png";
 import cleanOpsImage from "../../assets/ProjectImage/cleanops.svg";
 import steganographyAppImage from "../../assets/ProjectImage/stego.png"; // Import your image here
+import tipJarImage from "../../assets/ProjectImage/tipJarImage.png"; // Import your image here
 
 function ProjectCard() {
   const projects = [
@@ -59,6 +60,14 @@ function ProjectCard() {
       stack: ["Java", "Spring Boot", "HTML", "CSS", "JavaScript", "Railway"],
       link: "https://steganography-e300.up.railway.app/",
       image: steganographyAppImage, // Replace with your actual image import/path
+    },
+    {
+      title: "Web3 Tip Jar Widget",
+      description:
+        "A reusable React component that allows users to send ETH tips via MetaMask. Includes live ETH to USD conversion, confetti animations, and secure .env wallet setup. Built with Ethers.js and deployed on Vercel.",
+      stack: ["React", "Ethers.js", "MetaMask", "CoinGecko API", "Vercel"],
+      link: "https://web3-tip-jar.vercel.app/", // Replace with your actual deployed link
+      image: tipJarImage, // Replace with your actual image import/path
     },
   ];
 
